@@ -16,7 +16,7 @@ pipeline {
     triggers { pollSCM('***')}
 
     option {
-        buildDiscarder logRotator(artifacrDaysToKeepStr: ", artifactNumToKeepStr: ",daysToKeepStr: '2',numTokeepStr: '2'))
+        buildDiscarder logRotator(artifacrDaysToKeepStr: ", artifactNumToKeepStr: ",daysToKeepStr: '2',numTokeepStr: '2')
     }
     
     tools{
