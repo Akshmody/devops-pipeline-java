@@ -16,9 +16,13 @@ pipeline {
     triggers { pollSCM(* * * * *)}
 
     option {
-        buildDiscarder logRotator(numTokeepStr: ))
+        buildDiscarder logRotator(artifacrDaysToKeepStr: ", artifactNumToKeepStr: ",daysToKeepStr: '2',numTokeepStr: '2'))
     }
-
+    
+    tools{
+        jdk 'jdk11'
+        maven 'maven'
+    }
     stages {
         stage('Checkout') {
             steps {
